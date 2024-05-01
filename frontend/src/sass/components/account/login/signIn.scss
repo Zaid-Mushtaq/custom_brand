@@ -1,0 +1,347 @@
+@import "../../../variables";
+
+.signIn-form-container,
+.forgotPassword-form-container,
+.createAccount-form-container,
+.createAccountTwo-form-container,
+.createAccountThree-form-container {
+  width: 100%;
+
+  .__heading-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+
+    ._heading {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    ._description {
+      font-size: 15px;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #000;
+
+      @include breakpoint(992px) {
+        width: 80%;
+        margin: auto;
+      }
+
+      @include breakpoint(1500px) {
+        width: 95%;
+      }
+    }
+
+    ._create-account-description {
+      font-size: 15px;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #000;
+    }
+  }
+
+  .signIn-Heading-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .sinIn-heading {
+      font-size: 1.5rem;
+      letter-spacing: 0.5px;
+      color: #242424;
+      font-weight: 700;
+
+      @include breakpoint(0px) {
+        font-size: 1.3rem;
+      }
+
+      @include breakpoint(768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .checkout-sinIn-heading {
+      letter-spacing: 0.5px;
+      color: #242424;
+      font-weight: 700;
+
+      @include breakpoint(0px) {
+        font-size: 1.3rem;
+      }
+
+      @include breakpoint(768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .sinIn-text {
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      color: #242424;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .email-input-container,
+    .__email-input-container,
+    .password-input-container,
+    .firstName-input-container,
+    .lastName-input-container,
+    .dob-input-container,
+    .zipcode-input-container,
+    .phone-input-container {
+      .custom-input {
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 0;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+        height: 54px;
+
+        &:focus,
+        &:active {
+          box-shadow: rgba(118, 118, 118, 0.8) 0px 0px 0px 3px;
+        }
+      }
+      .custom-password-icon-container {
+        top: 15px;
+        right: 10px;
+
+        .custom-eye-icon {
+          width: 25px;
+          height: 25px;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+
+    .email-input-container {
+      margin-bottom: 20px;
+    }
+
+    .password-description-container {
+      width: 94%;
+      display: flex;
+
+      .password-description-text {
+        font-size: 11.5px;
+        text-align: justify;
+        letter-spacing: 0.3px;
+        color: #000;
+        line-height: 18px;
+        margin-bottom: 0;
+      }
+    }
+
+    .password-input-container {
+      position: relative;
+    }
+
+    .forgot-password-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .form-check {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-left: 0;
+
+        .custom_label {
+          align-items: center;
+
+          .custom_input {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+
+            &::before {
+              width: 10px;
+              height: 10px;
+            }
+
+            &:checked::before {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .forgot-password-link-container {
+        .forgot-password-link-text {
+          font-size: 12.5px;
+          color: rgb(0, 0, 0);
+          letter-spacing: 0.6px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    ._checkbox-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 26px;
+
+      .form-check {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+
+        .create_account_checkbox_label {
+          align-items: center;
+
+          .create_account_checkbox_input {
+            margin-right: 12px;
+            width: 25px;
+            height: 25px;
+
+            &::before {
+              width: 18px;
+              height: 18px;
+            }
+
+            &:checked::before {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .custom-label-container {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+
+        .custom-label-text {
+          font-size: 10px;
+          letter-spacing: 0.5px;
+          color: #000;
+          margin-bottom: 0;
+
+          .link {
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .createAccount_container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 26px;
+
+      .__form_check {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding-left: 0;
+
+        .create_account_checkbox_label {
+          align-items: center;
+
+          .create_account_checkbox_input {
+            margin-right: 12px;
+            width: 25px;
+            height: 25px;
+
+            &::before {
+              width: 18px;
+              height: 18px;
+            }
+
+            &:checked::before {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .custom-label-container {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+
+        .custom-label-text {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+          color: #000;
+          margin-bottom: 0;
+
+          .link {
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .submit-button-container,
+    .send-button-container,
+    .create-account-button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .submit-button,
+      .send-button,
+      .create-account-button {
+        width: 100%;
+        height: 54px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+      }
+    }
+
+    .return-to-login-button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .return-button {
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        border: 1px solid #d7d7d7;
+      }
+    }
+
+    .skip-link {
+      text-align: center;
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+    }
+  }
+}
+
+.forgotPassword-form-container {
+  padding: 9px 25px 25px 25px;
+}

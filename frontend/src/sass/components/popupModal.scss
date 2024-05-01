@@ -1,0 +1,73 @@
+.popup-header {
+  background-color: #f2f2f2;
+  color: #000000;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.popup-message {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+}
+
+.btn-secondary,
+.btn-danger {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.btn-danger {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.btn-remove,
+.btn-cancel {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  border: none;
+
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+  }
+}

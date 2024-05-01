@@ -1,0 +1,41 @@
+.custom-radio {
+  display: flex;
+  align-items: center;
+  align-items: start;
+  margin-bottom: 10px;
+
+  input {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+      background-color: #fff;
+      border-color: #000;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin: 2px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    &:checked::before {
+      background-color: #000;
+    }
+  }
+
+  label {
+    font-size: 14px;
+  }
+}

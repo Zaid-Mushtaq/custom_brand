@@ -1,0 +1,36 @@
+.custom-checkbox {
+  label {
+    display: flex;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .__input {
+    appearance: none;
+    border: 1px solid #000;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+      background-color: #000;
+      border-color: #000;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      margin: 3px;
+      background-color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    &:checked::before {
+      background-color: #000;
+      content: "\2713";
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+    }
+  }
+}

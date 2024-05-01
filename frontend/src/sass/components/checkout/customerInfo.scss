@@ -1,0 +1,207 @@
+@import "../../variables";
+
+.form-container {
+  width: 100%;
+  height: auto;
+
+  .customer-info-heading {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media-breakpoint-down("md") {
+      width: 100%;
+      gap: 12px;
+    }
+
+    .common-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 2%;
+
+      @include media-breakpoint-down("md") {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .custom-input-label {
+        letter-spacing: 0.5px;
+        font-size: 0.82857143em;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .custom-input {
+        height: 40px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 0;
+      }
+
+      .disabled-input {
+        width: 100%;
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 600;
+        }
+
+        &:focus,
+        &:active {
+          box-shadow: rgba(118, 118, 118, 0.8) 0px 0px 0px 2px;
+          outline: none;
+          border-color: rgba(118, 118, 118, 0.8);
+        }
+      }
+
+      .custom-select-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+
+        .custom-select-label {
+          letter-spacing: 0.5px;
+          font-size: 0.82857143em;
+          font-weight: 700;
+        }
+
+        .custom-select-input-box {
+          height: 40px;
+          border-radius: 0;
+          justify-content: space-between;
+
+          .selected-option-text {
+            font-size: 13px;
+            letter-spacing: 1px;
+          }
+
+          .custom-dropdown-icon {
+            font-size: 14px;
+          }
+
+          .custom-options-list {
+            top: 100%;
+            height: 200px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: #888;
+            }
+
+            &::-webkit-scrollbar-track {
+              background-color: #f1f1f1;
+            }
+
+            .custom-options {
+              padding: 8px;
+              font-size: 13px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    .save-shipping-button {
+      border: 1px solid rgba(118, 118, 118, 0.8);
+
+      @include breakpoint(0px) {
+        width: 60%;
+        margin: 20px auto 0;
+      }
+
+      @include breakpoint(769px) {
+        width: 48%;
+        margin: 20px 0 0 0;
+      }
+    }
+
+    .first-last-name-container,
+    .postalCode-country-container,
+    .email-telephone-container {
+
+      .first-name-container,
+      .last-name-container,
+      .postal-code-container,
+      .country-container,
+      .email-container,
+      .telephone-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+    }
+
+    .address-country-container {
+      .address-container {
+        @include breakpoint(0px) {
+          width: 100%;
+        }
+
+        @include breakpoint(769px) {
+          width: 50%;
+        }
+
+        @include breakpoint(821px) {
+          width: 65%;
+        }
+      }
+
+      .apartment-container {
+        @include breakpoint(0px) {
+          width: 100%;
+        }
+
+        @include breakpoint(769px) {
+          width: 50%;
+        }
+
+        @include breakpoint(821px) {
+          width: 35%;
+        }
+      }
+    }
+
+    .town-state-container {
+
+      .town-container,
+      .state-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+
+      .zip-container {
+        width: 24.2%;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

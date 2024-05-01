@@ -1,0 +1,52 @@
+@import "../../variables";
+
+.thankyou-page {
+  .container {
+    @include breakpoint(0px) {
+      padding-top: 91px;
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint(769px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint(1024px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .thankyou-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 82px;
+
+      @include breakpoint(769px) {
+        margin-top: 130px;
+      }
+    }
+  }
+
+  .no-order-generate {
+    @include breakpoint(0px) {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint(769px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint(1024px) {
+      padding-top: 93px;
+      padding-bottom: 40px;
+    }
+
+    margin-top: 82px;
+    text-align: center;
+    color: red;
+  }
+}

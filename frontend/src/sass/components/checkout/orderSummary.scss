@@ -1,0 +1,91 @@
+@import "../../variables";
+
+.__order_summary {
+  height: auto;
+
+  @include breakpoint(90px) {
+    width: calc(100% - 25px);
+  }
+
+  @include breakpoint(575px) {
+    width: calc(100% - 82px);
+  }
+
+  @include breakpoint(700px) {
+    width: calc(100% - 71px);
+  }
+
+  @include breakpoint(769px) {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .order-summary-container {
+    @include media-breakpoint-down("md") {
+      width: inherit;
+      position: fixed;
+      top: 75px;
+      z-index: 99999;
+    }
+
+    .custom-accordion {
+      width: 100%;
+      background: rgb(237, 237, 237);
+      padding: 0px 15px;
+      transition: all 0.5s ease 0s;
+    }
+
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 16px 0;
+
+      ._total-items-text {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+
+      ._total-items-value-wrapper {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        .arrow-icon {
+          font-size: 17px;
+          color: rgb(0, 0, 0);
+          transition: transform 0.3s ease;
+
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .card-body {
+      background: #fff;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}

@@ -1,0 +1,22 @@
+.home-page {
+  margin-top: 82px;
+}
+.home-page .container .home-product-title-container {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-page .container .home-product-title-container .home-product-title {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 0.3px;
+  color: black;
+}
+.home-page .container .home-product-title-container .home-product-description {
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  color: black;
+}/*# sourceMappingURL=home.css.map */

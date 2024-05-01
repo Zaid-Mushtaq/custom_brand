@@ -1,0 +1,14 @@
+.related-products {
+  position: relative;
+  margin: auto;
+}
+.related-products .related-product-text {
+  margin: 10px 0 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  padding: 0 0 5px;
+  line-height: 1.5;
+}/*# sourceMappingURL=relatedProduct.css.map */

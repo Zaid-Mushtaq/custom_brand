@@ -1,0 +1,163 @@
+* {
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.home-promotion-container {
+  margin-top: 10rem !important;
+  background-color: #005249;
+  color: #ffffff;
+  position: relative;
+  position: relative;
+}
+.home-promotion-container .container {
+  height: 100%;
+}
+.home-promotion-container .container .row {
+  height: 100%;
+}
+.home-promotion-container .container .row .custom-promo-image {
+  height: 100%;
+}
+.home-promotion-container .container .row .custom-promo-image .image-promo-container {
+  height: 710px;
+  margin-top: -5rem;
+  padding-bottom: 2rem;
+}
+.home-promotion-container .container .row .custom-promo-image .image-promo-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  padding: 0 1vw;
+  transition: transform 0.3s ease;
+}
+.home-promotion-container .container .row .custom-promo-image .image-promo-container img:hover {
+  transform: scale(1);
+}
+.home-promotion-container .container .row .right-content-propotion {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vw;
+  margin-top: 6vw;
+  justify-content: start;
+}
+.home-promotion-container .container .row .right-content-propotion h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.home-promotion-container .container .row .right-content-propotion p {
+  font-size: 1.1rem;
+  line-height: 26px;
+  margin-top: 1rem;
+}
+.home-promotion-container .container .row .right-content-propotion .btn-promo {
+  padding: 12px 15px;
+  background-color: azure;
+  color: #005249;
+  font-weight: bold;
+  width: 18rem;
+  font-size: 1.2rem;
+  border-radius: 0;
+  border-color: #005249;
+}
+.home-promotion-container .container .row .right-content-propotion .btn-promo:hover {
+  color: #fff;
+  background-color: #005249;
+  border-color: azure;
+}
+
+@media (max-width: 991.98px) {
+  .home-promotion-container {
+    height: auto;
+    width: 100%;
+    margin-top: 8rem !important;
+  }
+  .home-promotion-container .container {
+    width: 100%;
+  }
+  .home-promotion-container .container .row {
+    height: 100%;
+    padding: 2rem 0rem;
+  }
+  .home-promotion-container .container .row .custom-promo-image {
+    height: 100%;
+    width: 80%;
+  }
+  .home-promotion-container .container .row .custom-promo-image .image-promo-container {
+    margin-top: -6rem;
+    padding: 2vw 0;
+    height: 700px;
+    width: 100%;
+  }
+  .home-promotion-container .container .row .right-content-propotion {
+    height: auto;
+    width: 90%;
+    margin-top: 2rem;
+  }
+  .home-promotion-container .container .row .right-content-propotion p {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-top: 1rem;
+  }
+  .home-promotion-container .container .row .right-content-propotion .btn-promo {
+    width: 16rem;
+    padding: 5px 15px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .home-promotion-container {
+    height: auto;
+    margin-top: 10rem !important;
+  }
+  .home-promotion-container .container .row .custom-promo-image {
+    width: 100%;
+  }
+  .home-promotion-container .container .row .custom-promo-image .image-promo-container {
+    height: 610px;
+    padding: 2vw 2vw;
+    margin-top: -7rem;
+  }
+  .home-promotion-container .container .row .right-content-propotion {
+    margin-top: 2rem;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0vw 5vw;
+  }
+  .home-promotion-container .container .row .right-content-propotion h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  .home-promotion-container .container .row .right-content-propotion p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .home-promotion-container .container .row .right-content-propotion .btn-promo {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    padding: 7px 15px;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 543.98px) {
+  .home-promotion-container {
+    height: auto;
+  }
+  .home-promotion-container .container .row .custom-promo-image {
+    width: 100%;
+  }
+  .home-promotion-container .container .row .custom-promo-image .image-promo-container {
+    width: 100%;
+    height: 100%;
+  }
+  .home-promotion-container .container .row .right-content-propotion {
+    padding: 0 6vw;
+    justify-content: space-evenly;
+  }
+  .home-promotion-container .container .row .right-content-propotion .btn-promo {
+    width: 15rem;
+  }
+}/*# sourceMappingURL=homePromotion.css.map */

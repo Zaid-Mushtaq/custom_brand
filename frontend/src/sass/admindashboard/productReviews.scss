@@ -1,0 +1,364 @@
+@import "../variables";
+
+.productReviewsContainer {
+  width: calc(100% - 250px);
+  // border: 2px solid red;
+  box-sizing: border-box;
+  border-left: 1 solid rgba(0, 0, 0, 0.158);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  left: 250px;
+  position: relative;
+
+  .search-container {
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    width: 50%;
+
+    input[type="text"] {
+      width: calc(100% - 30px);
+      padding: 5px 15px;
+      margin-top: 7px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      &:focus {
+        border-color: #888;
+        outline: 0;
+        box-shadow: none;
+        box-shadow: 0 0 0 0.1rem #888;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      right: calc(30px);
+      top: 50%;
+      transform: translate(-50%, -30%);
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    @include media-breakpoint-down("lg") {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2vmax 0;
+    }
+
+    @include media-breakpoint-down("MD") {
+      left: 5%;
+    }
+  }
+
+  #reviewHeading {
+    font: 400 2rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: #f58621;
+    transform: all 0.5s;
+    margin: 0.3rem 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-down("md") {
+      font: 400 3vmax "Roboto";
+    }
+  }
+
+  .updateReviewForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    width: 30vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+    gap: 0.8vmax;
+    margin-bottom: 2rem;
+    // border: 2px solid;
+    @include media-breakpoint-down("xl") {
+      width: 80%;
+    }
+
+    @include media-breakpoint-down("lg") {
+      width: 70%;
+    }
+    @include media-breakpoint-down("md") {
+      padding: 3vmax;
+      width: 70%;
+    }
+    @include media-breakpoint-down("sm") {
+      padding: 3vmax;
+      width: 75%;
+      margin: 2.5rem auto;
+    }
+  }
+
+  .productReviewsFormHeading {
+    font: 400 1.8rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: #f58621;
+    transform: all 0.5s;
+    margin: 0.3rem 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-down("md") {
+      font: 400 2.5vmax "Roboto";
+    }
+  }
+  .updateReviewForm > .review-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 2vmax 0;
+    svg {
+      position: absolute;
+      transform: translateX(1vmax);
+      font-size: 1.6vmax;
+      color: rgba(0, 0, 0, 0.623);
+
+      @include media-breakpoint-down("md") {
+        font-size: 2.8vmax;
+      }
+    }
+
+    @include media-breakpoint-down("md") {
+      margin: 1.5vmax 0;
+    }
+  }
+
+  .updateReviewForm > .review-content > .update-review-input-data,
+  .updateReviewForm > .review-content > .review-role-fields {
+    padding: 15px 3vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.367);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+    text-align: start;
+
+    @include media-breakpoint-down("xl") {
+      padding: 1.5vmax 5vmax;
+      font: 300 1.2vmax cursive;
+    }
+    @include media-breakpoint-down("lg") {
+      padding: 1.5vmax 5vmax;
+      font: 300 1.2vmax cursive;
+    }
+
+    @include media-breakpoint-down("md") {
+      padding: 2.2vmax 5vmax;
+      font: 300 1.5vmax cursive;
+    }
+  }
+
+  #findReviewBtn {
+    border: none;
+    background-color: #f58621;
+    color: white;
+    font: 300 1vmax "Roboto";
+    width: 50%;
+    padding: 0.6vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+
+    &:hover {
+      background-color: #b35d0c;
+    }
+    @include media-breakpoint-down("xl") {
+      font-size: 1.7vmax;
+      width: 60%;
+    }
+
+    @include media-breakpoint-down("lg") {
+      font-size: 1.5vmax;
+      width: 70%;
+    }
+
+    @include media-breakpoint-down("md") {
+      font: 300 1.8vmax "Roboto";
+      padding: 1.4vmax 0;
+      width: 100%;
+    }
+  }
+
+  //Table
+  .table-container {
+    width: 100%; // Adjust this value as needed
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 15px;
+      height: 8px;
+      // border: 2px solid red;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    .table {
+      tbody {
+        overflow-x: auto; // Enable horizontal scrolling
+        white-space: nowrap; // Prevent text wrapping
+        tr {
+          @include media-breakpoint-down("lg") {
+            font-size: 1.2vmax;
+          }
+          @include media-breakpoint-down("md") {
+            font-size: 1.5vmax;
+          }
+          @include media-breakpoint-down("sm") {
+            font-size: 1.7vmax;
+          }
+        }
+
+        svg {
+          @include media-breakpoint-down("sm") {
+            width: 0.8em;
+            height: 0.8em;
+          }
+        }
+      }
+
+      .table-button {
+        background-color: transparent;
+        color: #ccc;
+
+        transform: all 0.5s;
+        &:hover {
+          color: #1b1f39;
+        }
+      }
+    }
+  }
+
+  // Pagination styling
+  .paginationBox {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+
+    .pagination {
+      display: inline-flex;
+      padding-left: 0;
+      margin: 0;
+      gap: 1rem;
+      position: relative;
+
+      .page-item {
+        display: inline;
+        padding: 0;
+        margin: 0;
+
+        .page-link {
+          color: #d3d6dd;
+          background-color: transparent;
+          border: none;
+          margin: 0;
+          padding: 5px 10px;
+          font-size: 1rem;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 2px solid transparent;
+          transition: border-color 0.3s ease-in-out;
+
+          &:hover {
+            color: #1b1f39;
+            font-weight: 600;
+          }
+
+          &.pageLinkActive {
+            color: #1b1f39;
+            font-weight: 600;
+
+            box-shadow: none;
+          }
+
+          &:active {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+
+      .page-link:hover::after,
+      .page-link.pageLinkActive::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 2px;
+        width: 40%;
+        margin: auto;
+        background-color: #1b1f39;
+        box-shadow: none;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Products per page select dropdown styling
+  .reviews-per-page {
+    margin-bottom: 10px;
+    padding-left: 7px;
+    label {
+      margin-right: 10px;
+      margin-right: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    select {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      // width: 4vmax;
+      &:focus {
+        border-color: #1b1f39;
+        outline: 0;
+      }
+    }
+  }
+
+  .greenColor {
+    color: green;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  .redColor {
+    color: red;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  @include media-breakpoint-down("md") {
+    border-left: none;
+    width: calc(100% - 5%);
+    left: 2.5%;
+    margin-top: 7vmax;
+  }
+}

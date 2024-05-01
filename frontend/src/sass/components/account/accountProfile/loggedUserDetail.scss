@@ -1,0 +1,39 @@
+@import "../../../variables";
+
+.logged-user-detail-section {
+    width: 100%;
+
+    .my-account {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        line-height: 1.5;
+        color: rgb(36, 36, 36);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+
+    .user-detail-section {
+        width: 100%;
+        margin: 40px auto;
+
+        .user-profile-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 1PX solid #d7d7d7;
+
+            @include media-breakpoint-down("md") {
+                border: none;
+            }
+        }
+
+        .user-information-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

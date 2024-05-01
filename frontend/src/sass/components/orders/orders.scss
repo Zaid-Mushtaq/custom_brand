@@ -1,0 +1,180 @@
+@import "../../variables";
+
+.order-container {
+  max-width: 760px;
+  margin: 0 auto 0;
+
+  .order-row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .order-history {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 15px;
+
+      .order-history-heading {
+        font-weight: 500;
+        font-size: 1.3125rem;
+        letter-spacing: 0.5px;
+        margin: 3px 0;
+        text-transform: capitalize;
+      }
+    }
+
+    .month-select-box {
+      .province-select-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(0px) {
+          width: 100%;
+        }
+
+        @include breakpoint(769px) {
+          width: 100%;
+        }
+
+        .selected-option-text {
+          justify-content: space-between;
+        }
+
+        .custom-select-input-box {
+          justify-content: space-between;
+          color: #999;
+        }
+
+        .custom-options {
+          top: 38px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .order-list-row {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    .order-list-container {
+      .row {
+        .col-12 {
+          .card {
+            padding: 4px 0;
+            border: 1px solid #d7d7d7;
+            border: 0;
+            border-radius: 0;
+
+            .card-body {
+              padding: 0;
+              border: none;
+              color: #767676;
+              box-sizing: border-box;
+
+              .tile-row {
+                flex-wrap: nowrap;
+
+                .order-image {
+                  .tile-image-wrapper {
+                    width: 80px;
+                    height: 125px;
+                    overflow: hidden;
+
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      border-radius: 0;
+                    }
+                  }
+                }
+
+                .order-detail {
+                  padding: 0;
+
+                  .order-header {
+                    margin-bottom: 4px;
+
+                    .order-no {
+                      margin-bottom: 0;
+                      font-weight: 600;
+                      color: #000;
+                      font-size: 0.6875rem;
+                      line-height: 1.125rem;
+                      letter-spacing: 0.5px;
+                    }
+
+                    .purchase-chanel {
+                      margin-bottom: 0;
+                      text-transform: uppercase;
+                      font-size: 0.5rem;
+                      letter-spacing: 0.22px;
+                      font-weight: 500;
+                      color: #000;
+                    }
+                  }
+
+                  .order-details {
+                    margin-bottom: 4px;
+
+                    .order-date,
+                    .order-status,
+                    .order-shipt-to,
+                    .order-item {
+                      margin-bottom: 0;
+                      color: #767676;
+                      font-size: 0.6875rem;
+                      line-height: 1.125rem;
+                      letter-spacing: 0.5px;
+                    }
+                  }
+
+                  .total-price {
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    color: #000;
+                    font-size: 0.6875rem;
+                    line-height: 1.125rem;
+                    letter-spacing: 0.5px;
+                  }
+                }
+
+                .order-links {
+                  margin-bottom: 0;
+                  padding: 0 0px;
+
+                  .view-order-page {
+                    display: block;
+                    float: right;
+                    clear: both;
+                    margin: 4px 0;
+                    font-size: 0.875rem;
+                    letter-spacing: 0.5px;
+                    text-decoration: underline;
+                    text-align: right;
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+
+          .break-line::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            opacity: 0.5;
+            background: #333 !important;
+            margin: 10px 0px 20px 0px;
+          }
+        }
+      }
+    }
+  }
+}

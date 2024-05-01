@@ -1,0 +1,41 @@
+.common-label {
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: none;
+}
+
+.common-input {
+  width: 100%;
+
+  &::placeholder {
+    color: #999;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: rgba(118, 118, 118, 0.8) 0px 0px 0px 2px;
+    outline: none;
+    border-color: rgba(118, 118, 118, 0.8);
+  }
+}
+
+.disabled-input {
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 600;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: rgba(118, 118, 118, 0.8) 0px 0px 0px 2px;
+    outline: none;
+    border-color: rgba(118, 118, 118, 0.8);
+  }
+}
+
+.password-icon {
+  position: absolute;
+  height: auto;
+  cursor: pointer;
+}

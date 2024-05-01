@@ -1,0 +1,289 @@
+@import "../../../variables";
+
+.address-title-conatiner {
+    padding: 12rem 0 0 0;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .address-edit-heading {
+        color: white;
+        background-color: black;
+        text-transform: uppercase;
+        text-align: right;
+        letter-spacing: 1px;
+        margin: 0;
+
+        @include breakpoint(0px) {
+            font-size: 18px;
+            padding: 15px 20px;
+            max-width: 200px;
+        }
+
+        @include breakpoint(769px) {
+            font-size: 24px;
+            max-width: 300px;
+            padding: 25px 30px;
+        }
+    }
+}
+
+.user-address-form-data-container {
+    width: 100%;
+    padding: 25px 0 100px 0;
+
+    .user-address-form-wrapper {
+        margin: auto;
+
+        @include breakpoint(1300px) {
+            width: 53%;
+        }
+
+        @include media-breakpoint-down("xl") {
+            width: 50%;
+        }
+
+        @include media-breakpoint-down("md") {
+            width: 100%;
+        }
+
+        .user-address-form {
+            width: 100%;
+
+            @include breakpoint(0px) {
+                padding: 10px 12px;
+            }
+
+            @include breakpoint(769px) {
+                padding: 20px;
+            }
+
+            .name-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 24px;
+
+                @include breakpoint(0px) {
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                @include breakpoint(769px) {
+                    flex-direction: row;
+                    gap: 0;
+                }
+
+                .firast-name-container,
+                .last-name-container {
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint(0px) {
+                        width: 100%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 48%;
+                    }
+
+                    .address-lable-text {
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        color: #222;
+                    }
+
+                    .address-input {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .street-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+
+                .address-lable-text {
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    color: #222;
+                }
+
+                .address-input {
+                    border-radius: 0;
+                }
+            }
+
+            .address-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 24px;
+
+                @include breakpoint(0px) {
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                @include breakpoint(769px) {
+                    flex-direction: row;
+                    gap: 0;
+                }
+
+                .country-select-container {
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint(0px) {
+                        width: 100%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 48%;
+                    }
+
+                    .custom-input {
+                        justify-content: space-between;
+                        color: #999;
+                        border-radius: 0;
+                    }
+
+                }
+
+                .province-select-container {
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint(0px) {
+                        width: 100%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 48%;
+                    }
+
+                    .custom-select-label {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .custom-select-input-box {
+                        justify-content: space-between;
+                        color: #999;
+                    }
+
+                    .custom-options-list {
+                        top: 38px;
+                        padding: 10px;
+                    }
+
+                }
+            }
+
+            .city-address-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 24px;
+
+                @include breakpoint(0px) {
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
+                @include breakpoint(769px) {
+                    flex-direction: row;
+                    gap: 0;
+                }
+
+                .city-container,
+                .postal-code-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+
+                    @include breakpoint(0px) {
+                        width: 100%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 48%;
+                    }
+
+                    .address-lable-text {
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        color: #222;
+                    }
+
+                    .address-input {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .phone-number-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+
+                .address-lable-text {
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    color: #222;
+                }
+
+                .address-input {
+                    border-radius: 0;
+                }
+
+            }
+
+            .button-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 40px auto;
+
+                .secondary-btn {
+                    width: 48%;
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+                }
+
+                .primary-btn {
+                    width: 48%;
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+                }
+            }
+
+            .myAccount-link-container {
+                display: flex;
+                align-items: center;
+
+                .common-customer-detail {
+                    align-items: center;
+                }
+            }
+
+        }
+
+    }
+
+}

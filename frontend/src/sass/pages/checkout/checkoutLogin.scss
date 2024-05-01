@@ -1,0 +1,46 @@
+@import "../../variables";
+
+.checkout-login-page {
+  .container {
+    @include breakpoint(0px) {
+      padding-top: 91px;
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint(769px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint(1024px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .checkout-login-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      @include breakpoint(0px) {
+        width: 100%;
+      }
+
+      @include breakpoint(769px) {
+        width: 80%;
+      }
+
+      @include breakpoint(850px) {
+        width: 60%;
+      }
+
+      @include breakpoint(1280px) {
+        width: 40%;
+      }
+
+      @include breakpoint(1500px) {
+        width: 35%;
+      }
+    }
+  }
+}

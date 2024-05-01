@@ -1,0 +1,82 @@
+@import "../../variables";
+
+.submit-btn-container {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  @include breakpoint (0px) {
+    margin-top: 20px;
+  }
+
+  @include breakpoint (768px) {
+    margin-top: 50px;
+  }
+
+  .btn-wrapper {
+    width: 100%;
+
+    .submit-button {
+      height: 42px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      transition: background-color 0.3s ease;
+
+      @include breakpoint(0px) {
+        width: 90%;
+        margin: auto;
+      }
+
+      @include breakpoint(1280px) {
+        width: 46%;
+        margin: 0;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+
+    .submit-payment-button {
+      display: flex;
+      justify-content: center;
+      padding: 8px 10px;
+      background: black;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.5s linear;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        font-weight: 500;
+      }
+
+      @include breakpoint (0px) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @include breakpoint (768px) {
+        width: 45%;
+        margin: 0;
+      }
+    }
+  }
+}

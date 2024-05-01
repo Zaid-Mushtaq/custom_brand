@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.login-page {
+  margin-top: 82px;
+
+  .login-page-main-column {
+    margin-top: 50px;
+
+    .signIn-main-container {
+      margin: auto;
+
+      @include breakpoint(0px) {
+        width: 100%;
+      }
+
+      @include breakpoint(769px) {
+        width: 80%;
+      }
+
+      @include breakpoint(850px) {
+        width: 60%;
+      }
+
+      @include breakpoint(1280px) {
+        width: 40%;
+      }
+
+      @include breakpoint(1500px) {
+        width: 35%;
+      }
+    }
+  }
+}

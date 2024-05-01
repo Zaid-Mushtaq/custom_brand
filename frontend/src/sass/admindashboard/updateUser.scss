@@ -1,0 +1,147 @@
+@import "../variables";
+.updateUserContainer {
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  left: 250px;
+  position: relative;
+  min-height: calc(100svh - 93px);
+  background-color: rgb(235, 235, 235);
+  margin: 0;
+  top: 0px;
+  padding: 0;
+  // border: 1px solid red;
+  position: relative;
+  padding: 4vmax 0;
+
+  #userHeading {
+    font: 400 2.6vmax "Roboto";
+    box-sizing: border-box;
+    color: #f58621;
+    transform: all 0.5s;
+    margin: 0.3rem 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-down("md") {
+      font: 400 3vmax "Roboto";
+    }
+  }
+
+  .updateUserForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    width: 30vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+    gap: 0.8vmax;
+    // border: 2px solid;
+    @include media-breakpoint-down("xl") {
+      width: 80%;
+    }
+
+    @include media-breakpoint-down("lg") {
+      width: 70%;
+    }
+    @include media-breakpoint-down("md") {
+      padding: 3vmax;
+      width: 70%;
+    }
+    @include media-breakpoint-down("sm") {
+      padding: 3vmax;
+      width: 75%;
+      height: 76%;
+      margin: auto;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .updateUserForm > .user-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 2vmax 0;
+    svg {
+      position: absolute;
+      transform: translateX(1vmax);
+      font-size: 1.6vmax;
+      color: rgba(0, 0, 0, 0.623);
+
+      @include media-breakpoint-down("md") {
+        font-size: 2.8vmax;
+      }
+    }
+
+    @include media-breakpoint-down("md") {
+      margin: 1.5vmax 0;
+    }
+  }
+
+  .updateUserForm > .user-content > .update-user-input-data,
+  .updateUserForm > .user-content > .user-role-fields {
+    padding: 15px 3vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.367);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+    text-align: start;
+
+    @include media-breakpoint-down("xl") {
+      padding: 1.5vmax 5vmax;
+      font: 300 1.2vmax cursive;
+    }
+    @include media-breakpoint-down("lg") {
+      padding: 1.5vmax 5vmax;
+      font: 300 1.2vmax cursive;
+    }
+
+    @include media-breakpoint-down("md") {
+      padding: 2.2vmax 5vmax;
+      font: 300 1.5vmax cursive;
+    }
+  }
+
+  #createProductBtn {
+    border: none;
+    background-color: #f58621;
+    color: white;
+    font: 300 1.2vmax "Roboto";
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+
+    &:hover {
+      background-color: #b35d0c;
+    }
+    @include media-breakpoint-down("xl") {
+      font-size: 1.8vmax;
+    }
+
+    @include media-breakpoint-down("lg") {
+      font-size: 1.5vmax;
+    }
+
+    @include media-breakpoint-down("md") {
+      font: 300 1.8vmax "Roboto";
+      padding: 1.4vmax 0;
+    }
+  }
+
+  @include media-breakpoint-down("md") {
+    border-left: none;
+    width: calc(100% - 5%);
+    left: 2.5%;
+    padding-top: 5vmax;
+    justify-content: center;
+  }
+}

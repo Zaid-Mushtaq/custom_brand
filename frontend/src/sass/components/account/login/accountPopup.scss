@@ -1,0 +1,212 @@
+@import "../../../variables";
+
+.nav-item-account_popup {
+  @include breakpoint(0px) {
+    position: initial;
+  }
+
+  @include breakpoint(769px) {
+    position: relative;
+  }
+
+  .account-popup-container {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: visibility 0s, opacity 0.5s linear;
+
+    @include breakpoint(0px) {
+      width: 90vw;
+      top: 40%;
+      left: 5%;
+      padding: 16px 0;
+    }
+
+    @include breakpoint(769px) {
+      width: 650px;
+      top: 100%;
+      right: 10%;
+      left: auto;
+      padding: 20px 16px;
+    }
+
+    .account-popup-row {
+      padding: 20px;
+
+      .status-container {
+        width: 100%;
+
+        @include breakpoint(0px) {
+          margin-bottom: 12px;
+        }
+
+        @include breakpoint(769px) {
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          line-height: 16px;
+          color: rgb(36, 36, 36);
+          letter-spacing: 0.2px;
+          font-weight: 600;
+
+          @include breakpoint(0px) {
+            font-size: 18px;
+          }
+
+          @include breakpoint(769px) {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .account-btn-column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .account-btn-wrapper {
+          width: 96%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 16px;
+          border-radius: 8px;
+          background: rgb(246, 246, 246);
+
+          .account-heading-text {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #000;
+            margin-bottom: 0;
+
+            @include breakpoint(0px) {
+              font-size: 14px;
+            }
+
+            @include breakpoint(769px) {
+              font-size: 16px;
+            }
+          }
+
+          .login-create-account-btns-container {
+            width: 100%;
+            display: flex;
+
+            @include breakpoint(0px) {
+              flex-direction: column;
+              gap: 10px;
+            }
+
+            @include breakpoint(769px) {
+              flex-direction: row;
+              gap: 20px;
+            }
+
+            .login-btn,
+            .create-account-btn {
+              height: 40px;
+              font-size: 13px;
+              text-transform: uppercase;
+              letter-spacing: 0.8px;
+              border-radius: 3px;
+            }
+
+            .__login {
+              border: none;
+
+              @include breakpoint(0px) {
+                width: 100%;
+              }
+
+              @include breakpoint(769px) {
+                width: 32%;
+              }
+            }
+
+            .__create-account {
+              border: none;
+
+              @include breakpoint(0px) {
+                width: 100%;
+              }
+
+              @include breakpoint(769px) {
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+
+      .account-items-column {
+        @include breakpoint(0px) {
+          border-top: 1px solid rgb(217, 217, 217);
+          margin-top: 12px;
+        }
+
+        @include breakpoint(769px) {
+          border-left: 1px solid rgb(217, 217, 217);
+          border-top: none;
+          margin-top: 0;
+        }
+
+        .account-items-wrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 10px;
+
+          @include breakpoint(0px) {
+            margin-top: 15px;
+          }
+
+          @include breakpoint(769px) {
+            margin-top: 0;
+          }
+
+          .dasboard-link-container,
+          .myAccount-link-container,
+          .orders-link-container,
+          .logout-link-container {
+            width: 100%;
+
+            .dashboard-link,
+            .myAccount-link,
+            .orders-link,
+            .logout-link {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 8px;
+              text-decoration: none;
+              color: #777777;
+
+              .__icon {
+                width: 22px;
+                height: 22px;
+              }
+
+              span {
+                color: rgb(0, 0, 0);
+                margin: 0px;
+                padding: 0px;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.5px;
+              }
+
+              &:hover {
+                color: #000;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

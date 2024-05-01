@@ -1,0 +1,35 @@
+@import "../sass/mixin/mixins";
+
+$font-family-primary: "AzoSans-Regular";
+
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 769px,
+  lg: 992px,
+  xl: 1300px,
+) !default;
+
+$heightLarge: calc(85vh - 146px);
+$heightDesktop: calc(100vh - 146px);
+$heightTablet: calc(50vh - 105px);
+$heighMobile: calc(88vh - 114px);
+
+// @mixin breakpoint($bp: 0) {
+//   @media (min-width: $bp) {
+//     @content;
+//   }
+// }
+
+@mixin breakpoint($min: 0, $max: null) {
+  @if $max == null {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

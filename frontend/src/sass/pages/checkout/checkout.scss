@@ -1,0 +1,89 @@
+@import "../../variables";
+
+.checkout-page {
+  .container {
+    @include breakpoint(0px) {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    @include breakpoint(769px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint(1024px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .row {
+      .__checkout-custom-row {
+        width: 100%;
+        display: flex;
+
+        @include breakpoint(0px) {
+          flex-direction: column;
+        }
+
+        @include breakpoint(769px) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .checkout-left {
+          @include breakpoint(0px) {
+            order: 2;
+            width: 100%;
+          }
+
+          @include breakpoint(769px) {
+            order: 1;
+            width: 57%;
+          }
+
+          @include breakpoint(769px, 1200px) {
+            height: 700px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: #888;
+            }
+            &::-webkit-scrollbar-track {
+              background-color: #f1f1f1;
+            }
+          }
+
+          .checkout-info-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint(0px) {
+              margin-top: 82px;
+            }
+
+            @include breakpoint(769px) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .order-summary-wrapper {
+        @include breakpoint(0px) {
+          order: 1;
+          width: 100%;
+        }
+
+        @include breakpoint(769px) {
+          order: 2;
+          width: 40%;
+        }
+      }
+    }
+  }
+}

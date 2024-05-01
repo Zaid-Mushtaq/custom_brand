@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.product-detail-page {
+  margin-top: 82px;
+
+  .custom-container {
+    .product-detail-row_one {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include media-breakpoint-down("md") {
+        padding: 0;
+      }
+
+      .product-slider-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

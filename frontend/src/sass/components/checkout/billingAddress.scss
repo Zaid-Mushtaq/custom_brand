@@ -1,0 +1,250 @@
+@import "../../variables";
+
+.billing-conatiner {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+
+  .billing-heading {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media-breakpoint-down("md") {
+      width: 100%;
+      gap: 12px;
+    }
+
+    .common-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 1.8%;
+
+      @include media-breakpoint-down("md") {
+        flex-direction: row;
+      }
+
+      .custom-input-label {
+        letter-spacing: 0.5px;
+        font-size: 0.82857143em;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .custom-input {
+        height: 40px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 0;
+      }
+
+      .custom-select-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+
+        .custom-select-label {
+          letter-spacing: 0.5px;
+          font-size: 0.82857143em;
+          font-weight: 700;
+        }
+
+        .custom-select-input-box {
+          height: 40px;
+          border-radius: 0;
+          justify-content: space-between;
+
+          .selected-option-text {
+            font-size: 14px;
+            letter-spacing: 1px;
+          }
+
+          .custom-dropdown-icon {
+            font-size: 13px;
+          }
+
+          .custom-options-list {
+            top: 100%;
+            height: 200px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: #888;
+            }
+
+            &::-webkit-scrollbar-track {
+              background-color: #f1f1f1;
+            }
+
+            .custom-options {
+              padding: 8px;
+              font-size: 13px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    .checkbox-container {
+      width: 100%;
+
+      .checkbox-button-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        .box-label-container {
+          display: flex;
+          flex-direction: row;
+
+          .custom_label {
+            align-items: center;
+
+            .custom_input {
+              margin-right: 12px;
+              width: 18px;
+              height: 18px;
+
+              &::before {
+                width: 10px;
+                height: 10px;
+              }
+
+              &:checked::before {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .firstLast-name-container {
+      width: 100%;
+
+      .first-name-conatiner {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+
+      .last-name-conatiner {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+    }
+
+    .billing-street-address-container {
+      width: 100%;
+
+      .street-address-container {
+        @include breakpoint(0px) {
+          height: 55%;
+        }
+
+        @include breakpoint(768px) {
+          width: 52%;
+        }
+
+      }
+
+      .city-container {
+        @include breakpoint(768px) {
+          width: 25%;
+        }
+      }
+
+      .state-zip-container {
+        @include breakpoint(768px) {
+          width: 25%;
+        }
+      }
+    }
+
+    .billing-country-province-container {
+      width: 100%;
+
+      .billing-country-container {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+
+      .billing-province-container {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+    }
+
+    .billing-email-telephone-container {
+      width: 100%;
+
+      .billing-email-container {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+
+      .billing-telephone-container {
+        width: 50%;
+
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+    }
+
+    .save-billing-button {
+      padding: 8px 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.5s linear;
+      border: 1px solid rgba(118, 118, 118, 0.8);
+
+      &:hover {
+        background-color: black;
+        color: white;
+        font-weight: 500;
+      }
+
+      @include breakpoint (0px) {
+        width: 60%;
+        margin: 20px auto 0;
+      }
+
+      @include breakpoint (768px) {
+        width: 48%;
+        margin: 20px 0 0 0;
+      }
+
+    }
+  }
+}

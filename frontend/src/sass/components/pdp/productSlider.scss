@@ -1,0 +1,189 @@
+@import "../../variables";
+
+.product-slider-main {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+    @include media-breakpoint-down("md") {
+        width: 100%;
+    }
+
+    .carousel {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: auto;
+
+        .carousel-item {
+            list-style: none;
+            z-index: 1;
+            width: 100%;
+            transition: transform .4s linear;
+
+            .slider-image-wrapper {
+                width: 100%;
+                height: 500px;
+                margin: auto;
+
+                .product-image {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
+                }
+
+                &:target {
+                    z-index: 3;
+                    animation: slide 1s 1;
+                }
+
+                &:not(:target) {
+                    animation: hidden 1s 1;
+                }
+            }
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+            &.disabled {
+                opacity: 0.5 !important;
+                cursor: not-allowed;
+            }
+
+            .carousel-prev-icon,
+            .carousel-next-icon {
+                font-size: 20px;
+                color: black;
+            }
+        }
+    }
+
+    .slider-bottom-image-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        overflow: hidden;
+        width: 100%;
+        margin: 20px auto;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+
+            @include media-breakpoint-down("md") {
+                gap: 10px;
+            }
+
+            li {
+                flex: auto;
+                list-style: none;
+
+                .slider-bottom-image-container {
+                    height: 100%;
+                    width: 100%;
+
+                    a {
+                        display: block;
+                    }
+
+                    .slider-bottom-image {
+                        width: 60px;
+                        height: 75px;
+
+                        @include media-breakpoint-down("md") {
+                            width: 50px;
+                            height: 65px;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .custom-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+
+        .modal-content {
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 5%;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 8px;
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 36px;
+                color: #333;
+                cursor: pointer;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hidden {
+    0% {
+        z-index: 2;
+    }
+
+    100% {
+        z-index: 2;
+    }
+}

@@ -1,0 +1,266 @@
+@import "../../variables";
+.processOrderContainer {
+  width: calc(100% - 250px);
+  //   border: 2px solid red;
+  box-sizing: border-box;
+  border-left: 1 solid rgba(0, 0, 0, 0.158);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  left: 250px;
+  position: relative;
+  min-height: calc(100svh - 93px);
+  background-color: rgb(235, 235, 235);
+
+  .processOrder-custom-row {
+    // border: 2px solid yellow;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+
+    @include media-breakpoint-down("lg") {
+      grid-template-columns: 5fr 4fr;
+    }
+
+    @include media-breakpoint-down("md") {
+      height: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .processOrderLeftContainer {
+      .confirmProcessShippingArea {
+        padding: 5vmax;
+        padding-bottom: 0%;
+
+        .main-head {
+          font: 400 2vmax "Roboto";
+
+          @include media-breakpoint-down("md") {
+            font: 400 3vmax "Roboto";
+          }
+        }
+
+        .confirmShippingAreaBox,
+        .confirmCartItems,
+        .orderDetailsBoxContainer {
+          margin: 2vmax;
+        }
+
+        .confirmShippingAreaBox {
+          div {
+            display: flex;
+            margin: 1vmax 0;
+
+            p {
+              font: 400 1.3vmax "Roboto";
+              color: black;
+
+              @include media-breakpoint-down("lg") {
+                font: 400 1.8vmax "Roboto";
+              }
+            }
+
+            span {
+              color: #575757;
+              font: 100 1.2vmax "Roboto";
+              margin: 0 1vmax;
+
+              @include media-breakpoint-down("lg") {
+                font: 100 1.7vmax "Roboto";
+              }
+            }
+          }
+        }
+
+        .orderDetailsBoxContainer {
+          .order-price {
+            display: flex;
+
+            span {
+              padding-left: 1vw;
+            }
+          }
+        }
+        .confirmCartItems {
+          padding: 0vmax;
+          padding-top: 1vmax;
+          p {
+            font: 400 1.8vmax "Roboto";
+
+            @include media-breakpoint-down("lg") {
+              font: 100 2vmax "Roboto";
+            }
+
+            @include media-breakpoint-down("md") {
+              font: 100 2.5vmax "Roboto";
+            }
+          }
+
+          .confirmCartItemsContainer {
+            max-height: 20vmax;
+            overflow-y: auto;
+
+            div {
+              font: 400 1.2vmax "Roboto";
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin: 1.5vmax 0;
+
+              img {
+                width: 3vmax;
+              }
+
+              a {
+                min-width: 50%;
+                text-decoration: none;
+                margin: 0 1.5vmax;
+                color: #575757;
+
+                @include media-breakpoint-down("md") {
+                  width: auto;
+                }
+              }
+              span {
+                font: 100 1.2vmax "Roboto";
+                color: #5e5e5e;
+
+                @include media-breakpoint-down("lg") {
+                  font: 100 1.5vmax "Roboto";
+                }
+              }
+
+              @include media-breakpoint-down("lg") {
+                font: 100 1.4vmax "Roboto";
+              }
+            }
+          }
+        }
+
+        @include media-breakpoint-down("lg") {
+          padding: 3vmax 2vmax;
+        }
+      }
+    }
+
+    .processOrderRightContainer {
+      border-left: 1px solid rgba(0, 0, 0, 0.247);
+
+      .orderSummaryProcess {
+        padding: 4vmax;
+        margin: 0;
+        .summary-para {
+          text-align: center;
+          box-sizing: border-box;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+          font: 400 1.8vmax "Roboto";
+          padding: 1vmax;
+          margin: auto;
+          width: 100%;
+
+          @include media-breakpoint-down("lg") {
+            font: 400 2vmax "Roboto";
+            text-align: start;
+          }
+          @include media-breakpoint-down("md") {
+            font: 400 2.5vmax "Roboto";
+          }
+        }
+
+        .processOrder-payment {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          margin: 3rem 0;
+          svg {
+            position: absolute;
+            transform: translateX(1vmax);
+            font-size: 1.6vmax;
+            color: rgba(0, 0, 0, 0.623);
+
+            @include media-breakpoint-down("md") {
+              font-size: 2.8vmax;
+            }
+          }
+
+          .processOrderSelectField {
+            padding: 15px 3vmax;
+            padding-right: 1vmax;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.367);
+            border-radius: 4px;
+            font: 300 1.2vmax cursive;
+            outline: none;
+            text-align: start;
+
+            @include media-breakpoint-down("xl") {
+              padding: 1.4vmax 2.5vmax;
+              font: 300 1.2vw cursive;
+            }
+            @include media-breakpoint-down("lg") {
+              padding: 1.5vmax 3vmax;
+              font: 300 1.3vmax cursive;
+              text-align: center;
+            }
+
+            @include media-breakpoint-down("md") {
+              padding: 2.2vmax 5vmax;
+              font: 300 1.5vmax cursive;
+            }
+          }
+        }
+
+        button {
+          background-color: tomato;
+          font: 400 1.2vmax "Roboto";
+          color: white;
+          width: 100%;
+          cursor: pointer;
+          transition: 0.5s;
+          padding: 1vmax;
+          width: 100%;
+          border: none;
+
+          &:hover {
+            background-color: rgb(192, 71, 50);
+          }
+          @include media-breakpoint-down("lg") {
+            font-size: 1.7vmax;
+          }
+        }
+
+        @include media-breakpoint-down("lg") {
+          padding: 2vmax;
+        }
+      }
+
+      @include media-breakpoint-down("md") {
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.247);
+      }
+    }
+  }
+
+  .greenColor {
+    color: green;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  .redColor {
+    color: red;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  @include media-breakpoint-down("md") {
+    border-left: none;
+    width: calc(100% - 5%);
+    left: 2.5%;
+    margin-top: 5vmax;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,78 @@
+@import "../../../variables";
+
+.common-customer-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 20px;
+
+  @include media-breakpoint-down("md") {
+    padding: 20px 0;
+  }
+
+  .common-detail-edit-conatiner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 12px;
+
+    .common-detail-heading {
+      color: #000;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      font-size: 1.3125rem;
+    }
+
+    .common-edit-link {
+      color: #000;
+      font-size: 0.875rem;
+      letter-spacing: 0.5px;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .__password {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #000;
+  }
+
+  .common-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #000;
+    }
+
+    .user_name {
+      text-transform: capitalize;
+    }
+  }
+
+  .common-new-add-link {
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

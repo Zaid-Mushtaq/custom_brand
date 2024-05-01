@@ -1,0 +1,208 @@
+@import "../../variables";
+
+.order-product-summary {
+    margin: 0 auto;
+    border-radius: 0;
+    box-sizing: border-box;
+    border: none;
+
+    .card-body {
+        padding: 8px 0 12px;
+
+        .product-summary-block {
+
+            .detail-shipment-header {
+                font-size: .875rem;
+                line-height: 22px;
+                letter-spacing: .4px;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: #000;
+            }
+
+            .card-body {
+                padding: 8px 0 12px;
+
+                .product-line-item {
+                    border-bottom: 1px solid #d4d4d4;
+                    padding: 8px 0 20px;
+
+                    .product-line-item-details {
+                        display: flex;
+                        flex-direction: row;
+
+                        .item-image {
+                            position: relative;
+                            width: 100px;
+                            height: 100px;
+                            margin: 0 25px 0 0;
+
+                            .item-images {
+                                max-height: none;
+                                margin: 0;
+                                max-width: 90px;
+                                width: 90px;
+                                padding-top: 4px;
+                            }
+                        }
+
+                        .item-details {
+                            display: flex;
+                            width: 100%;
+
+                            .item-attributes {
+                                display: flex;
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                                vertical-align: top;
+                                padding-left: 0;
+                                width: 90%;
+
+                                .line-item-header {
+                                    width: 100%;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+
+                                    .line-item-name {
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+
+                                        span {
+                                            font-size: .6875rem;
+                                            letter-spacing: 0.5px;
+                                            margin-bottom: 0;
+                                            color: #222;
+                                            text-transform: capitalize;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+
+                                .line-item-attribute {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-bottom: 12px;
+
+                                    .line-item-attributes {
+                                        width: 100%;
+                                        color: #000;
+                                        font-size: .6875rem;
+                                        line-height: 1.64;
+                                        font-weight: 500;
+                                        letter-spacing: 0.5px;
+                                        margin: 0;
+                                    }
+                                }
+
+                                .price-container {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    margin: 0;
+
+                                    .line-item-unit-price {
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: auto;
+                                        min-height: 60px;
+                                        justify-content: space-between;
+                                        padding: 0;
+
+                                        .line-item-price-info {
+                                            margin-bottom: 0;
+
+                                            .unit-price-label {
+                                                margin-bottom: 4px;
+                                                font-size: 0.6875rem;
+                                                line-height: 18px;
+                                                letter-spacing: 0.3;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+
+                                        .item-price {
+                                            .unit-price-value {
+                                                margin-bottom: 4px;
+                                                font-size: 0.6875rem;
+                                                line-height: 18px;
+                                                letter-spacing: 0.3;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                    }
+
+                                    .line-item-quantity {
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: 100%;
+                                        min-height: 75px;
+                                        justify-content: space-between;
+                                        padding: 0;
+
+                                        .line-item-price-info {
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-bottom: 0;
+                                            padding-top: 5px;
+
+                                            span {
+                                                margin-bottom: 18px;
+                                                font-size: .6875rem;
+                                                line-height: 18px;
+                                                letter-spacing: .3px;
+                                                font-weight: 500;
+                                            }
+
+                                            :last-child {
+                                                text-align: center;
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                    }
+
+
+                                    .line-item-total-price {
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: auto;
+                                        min-height: 60px;
+                                        justify-content: space-between;
+                                        padding: 0;
+
+                                        .line-item-price-info {
+                                            margin-bottom: 0;
+
+                                            .Total-price-label {
+                                                margin-bottom: 4px;
+                                                font-size: 0.6875rem;
+                                                line-height: 18px;
+                                                letter-spacing: 0.3;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+
+                                        .item-price {
+                                            .unit-price-value {
+                                                margin-bottom: 4px;
+                                                font-size: 0.6875rem;
+                                                line-height: 18px;
+                                                letter-spacing: 0.3;
+                                                font-weight: 500;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

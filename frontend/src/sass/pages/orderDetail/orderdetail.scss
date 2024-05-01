@@ -1,0 +1,577 @@
+@import "../../variables";
+
+.order-detail-page {
+  margin-top: 82px;
+
+  .order-history-title-conatiner {
+    padding: 5rem 0 0 0;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .order-history-heading {
+      color: white;
+      background-color: black;
+      text-transform: uppercase;
+      text-align: right;
+      letter-spacing: 1px;
+      margin: 0;
+
+      @include breakpoint(0px) {
+        font-size: 18px;
+        padding: 15px 20px;
+        max-width: 200px;
+      }
+
+      @include breakpoint(769px) {
+        font-size: 24px;
+        max-width: 300px;
+        padding: 25px 30px;
+      }
+    }
+  }
+
+  .receipt {
+    max-width: 1440px;
+    margin-top: 36px;
+
+    .receipt-row {
+      margin: 0;
+      justify-content: center;
+
+      .receipt-main {
+        position: relative;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      .confirm-detail {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 1rem;
+
+        .card-header {
+          display: flex;
+          border-bottom: none;
+          padding: 12px 0;
+          background-color: #fff;
+
+          @include breakpoint(0px) {
+            flex-direction: column;
+            align-items: start;
+          }
+
+          @include breakpoint(769px) {
+            flex-direction: row;
+            align-items: center;
+          }
+
+          :first-child {
+            border-radius: 3px 3px 0 0;
+            margin-bottom: 0;
+          }
+
+          .card-header-custom {
+            margin-right: 0.8rem;
+            font-size: 1.3125rem;
+            line-height: 34px;
+            letter-spacing: 0.3px;
+          }
+
+          .order-no {
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
+          }
+        }
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          padding: 8px 0 12px;
+
+          .single-shipping {
+            display: flex;
+            flex-direction: column;
+
+            .status-detail {
+              padding: 0;
+              margin-top: 24px;
+              .order-status-head {
+                font-size: 1.3125rem;
+                letter-spacing: 0.3px;
+              }
+              .status-info {
+                display: flex;
+
+                .orderstatus {
+                  display: flex;
+                  padding: 0px 0;
+                  align-items: center;
+
+                  @include breakpoint(0px) {
+                    font-size: 0.775rem;
+                  }
+
+                  @include breakpoint(769px) {
+                    font-size: 1rem;
+                  }
+
+                  .order-status-title {
+                    text-transform: capitalize;
+                  }
+
+                  .order-delivered {
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #000;
+                    padding-left: 3rem;
+                    color: green;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+
+            .summary-details {
+              padding: 0;
+              margin: 0;
+
+              .address-summary {
+                .customer-name {
+                  display: flex;
+                  gap: 6px;
+
+                  .first-name,
+                  .last-name {
+                    font-weight: 500;
+                    font-size: 0.875rem;
+                    line-height: 22px;
+                    letter-spacing: 0.4px;
+                    text-transform: capitalize;
+                  }
+                }
+
+                .address {
+                  font-size: 0.6875rem;
+                  line-height: 18px;
+                  letter-spacing: 0.3px;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                }
+
+                .city-state-country-posatl {
+                  display: flex;
+                  gap: 6px;
+
+                  .city,
+                  .state-code,
+                  .country,
+                  .postal-code {
+                    font-size: 0.6875rem;
+                    line-height: 18px;
+                    letter-spacing: 0.3px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                  }
+                }
+              }
+
+              .order-summary-phone {
+                font-size: 0.6875rem;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                font-weight: 500;
+                text-transform: uppercase;
+              }
+            }
+
+            .summary-details {
+              .start-lines {
+                display: flex;
+                padding: 0px 0;
+
+                .shipping-method {
+                  line-height: 22px;
+                  letter-spacing: 0.4px;
+                  margin: 12px 0 12px;
+
+                  @include breakpoint(0px) {
+                    font-size: 0.775rem;
+                  }
+
+                  @include breakpoint(769px) {
+                    font-size: 0.875rem;
+                  }
+
+                  .shipping-method-title {
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #000;
+                  }
+
+                  .shipping-method-arrival-time {
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #000;
+                  }
+                }
+              }
+            }
+
+            .summary-section-label {
+              margin-top: 3px;
+              font-size: 0.875rem;
+              font-weight: 500;
+              line-height: 22px;
+              letter-spacing: 0.4px;
+              text-transform: capitalize;
+            }
+
+            .address-summary {
+              .customer-name {
+                display: flex;
+                gap: 6px;
+
+                .first-name,
+                .last-name {
+                  font-weight: 500;
+                  font-size: 0.875rem;
+                  line-height: 22px;
+                  letter-spacing: 0.4px;
+                  text-transform: capitalize;
+                }
+              }
+
+              .address {
+                font-size: 0.6875rem;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                font-weight: 500;
+                text-transform: uppercase;
+              }
+
+              .city-state-country-posatl {
+                display: flex;
+                gap: 6px;
+
+                .city,
+                .state-code,
+                .country,
+                .postal-code {
+                  font-size: 0.6875rem;
+                  line-height: 18px;
+                  letter-spacing: 0.3px;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                }
+              }
+
+              .order-summary-phone {
+                font-size: 0.6875rem;
+                line-height: 18px;
+                letter-spacing: 0.3px;
+                font-weight: 500;
+                text-transform: uppercase;
+              }
+            }
+
+            .summary-details {
+              padding: 0;
+              margin-top: 12px;
+
+              .summary-section-label {
+                font-size: 0.875rem;
+                line-height: 22px;
+                letter-spacing: 0.4px;
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+
+              .payment-details {
+                margin-top: 3px;
+
+                .credit-card-type {
+                  display: flex;
+
+                  span {
+                    font-size: 0.6875rem;
+                    line-height: 18px;
+                    letter-spacing: 0.3px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                  }
+                }
+
+                .credit-card-number {
+                  font-size: 0.6875rem;
+                  line-height: 18px;
+                  letter-spacing: 0.3px;
+                  font-weight: 500;
+                }
+
+                .credit-card-expiration-date {
+                  span {
+                    font-size: 0.6875rem;
+                    line-height: 18px;
+                    letter-spacing: 0.3px;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .checkout-order-total-summary {
+        border: none;
+        border-radius: 0;
+
+        .order-total-summary {
+          padding: 8px 0 12px;
+
+          .subtotal-item {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding-left: 0;
+            line-height: 22px;
+
+            .start-lines {
+              position: relative;
+              padding: 0 15px;
+
+              .order-receipt-label {
+                margin-bottom: 8px;
+                margin-top: 0;
+
+                span {
+                  font-size: 0.875rem;
+                  font-weight: 500;
+                  color: #000;
+                }
+              }
+            }
+
+            .end-lines {
+              position: relative;
+              padding: 0 15px;
+
+              .text-right {
+                margin-bottom: 8px;
+                margin-top: 0;
+                text-align: right !important;
+
+                .sub-total {
+                  font-size: 0.875rem;
+                  color: #000;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+
+        // css for if we have discount on order
+        // .order-discount {
+        //   width: 100%;
+        //   margin: 0;
+        //   padding-left: 0;
+        //   line-height: 22px;
+
+        //   .start-line {
+        //     position: relative;
+        //     padding-right: 15px;
+        //     padding-left: 15px;
+
+        //     .order-receipt-label {
+        //       margin-bottom: 8px;
+        //       margin-top: 0;
+
+        //       span {
+        //         font-size: .875rem;
+        //         color: #000;
+        //         font-weight: 500;
+        //       }
+        //     }
+        //   }
+
+        //   .end-lines {
+        //     position: relative;
+        //     padding-right: 15px;
+        //     padding-left: 15px;
+        //     text-align: right;
+
+        //     .text-right {
+        //       margin-bottom: 8px;
+        //       margin-top: 0;
+
+        //       .order-discount-total {
+        //         font-size: .875rem;
+        //         color: #000;
+        //         font-weight: 600;
+        //       }
+        //     }
+        //   }
+        // }
+        // end css for if we have discount on order
+
+        .shipping-item {
+          width: 100%;
+          margin: 0;
+          padding-left: 0;
+          line-height: 22px;
+
+          .start-line {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .shipping-receipt-label {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              span {
+                font-size: 0.875rem;
+                color: #000;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .end-lines {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: right;
+
+            .text-right {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              .shipping-total-cost {
+                font-size: 0.875rem;
+                color: #000;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        .sales-tax-item {
+          width: 100%;
+          margin: 0;
+          padding-left: 0;
+          line-height: 22px;
+
+          .start-line {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .shipping-receipt-label {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              span {
+                font-size: 0.875rem;
+                color: #000;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .end-lines {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: right;
+
+            .text-right {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              .tax-total {
+                font-size: 0.875rem;
+                color: #000;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        .grand-total {
+          width: 100%;
+          margin: 0;
+          padding-left: 0;
+          line-height: 22px;
+
+          .start-line {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .shipping-receipt-label {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              span {
+                font-size: 1rem;
+                color: #000;
+                font-weight: 600;
+              }
+            }
+          }
+
+          .end-lines {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: right;
+
+            .text-right {
+              margin-bottom: 8px;
+              margin-top: 0;
+
+              .tax-total {
+                font-size: 0.875rem;
+                color: #000;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      .myAccount-link-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .common-customer-detail {
+          padding-top: 50px;
+          align-items: center;
+        }
+      }
+
+      .greenColor {
+        color: green;
+        font-weight: 600;
+        letter-spacing: normal;
+      }
+      .redColor {
+        color: red;
+        font-weight: 500;
+        letter-spacing: normal;
+      }
+    }
+  }
+}

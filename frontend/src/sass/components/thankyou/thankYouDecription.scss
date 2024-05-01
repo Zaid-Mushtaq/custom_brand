@@ -1,0 +1,111 @@
+@import "../../variables";
+
+.thankyou-shippig-billing-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(0px) {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  @include breakpoint(1024px) {
+    width: 80%;
+    margin-top: 80px;
+  }
+
+  .address-wrapper {
+    width: 100%;
+    display: flex;
+
+    gap: 20px;
+
+    @include breakpoint(0px) {
+      flex-direction: column;
+    }
+
+    @include breakpoint(769px) {
+      flex-direction: row;
+    }
+
+    .shipping-address-box,
+    .billing-address-box {
+      display: flex;
+      flex-direction: column;
+      background-color: #f9f7f5;
+      padding: 20px;
+      .text-format {
+        text-transform: capitalize;
+      }
+      @include breakpoint(0px) {
+        width: 100%;
+      }
+
+      @include breakpoint(769px) {
+        width: 50%;
+      }
+
+      @include breakpoint(1280px) {
+        width: 28%;
+      }
+
+      .shiping-heading-wrapper,
+      .billing-heading-wrapper {
+        margin-bottom: 16px;
+        .shipping-heading,
+        .billing-heading {
+          font-size: 14px;
+          font-weight: 700;
+          color: #000;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      .shipping-value-wrapper,
+      .billing-value-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .value-text {
+          width: 98%;
+          font-size: 12px;
+          letter-spacing: 0.4px;
+          color: #000;
+          word-wrap: break-word;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .continue-shopping-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(0px) {
+      margin-top: 60px;
+    }
+
+    @include breakpoint(1024px) {
+      margin-top: 60px;
+    }
+
+    .continue-shopping-button {
+      height: 46px;
+      font-size: 16px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      @include breakpoint(0px) {
+        width: 100%;
+      }
+
+      @include breakpoint(769px) {
+        width: 40%;
+      }
+    }
+  }
+}

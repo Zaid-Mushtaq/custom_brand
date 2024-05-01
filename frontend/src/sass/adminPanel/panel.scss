@@ -1,0 +1,27 @@
+@import "../variables";
+
+.dashboard-main-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 2px solid red;
+  .header-container-fluid {
+  }
+
+  .main-container-fluid {
+    .row {
+      ._sidebar-column {
+        margin-top: 93px;
+
+        @include media-breakpoint-down(md) {
+          padding-right: 0;
+        }
+      }
+
+      ._dashboard-column {
+        margin-top: 93px;
+        padding: 20px;
+      }
+    }
+  }
+}

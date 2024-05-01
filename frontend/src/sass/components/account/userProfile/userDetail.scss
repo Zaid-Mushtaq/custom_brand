@@ -1,0 +1,24 @@
+@import "../../../variables";
+
+.common-detail-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: none;
+
+    @include media-breakpoint-down("md") {
+        padding: 20px 0;
+    }
+
+    .common-new-add-link {
+        color: #000;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

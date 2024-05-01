@@ -1,0 +1,242 @@
+@import '../../../variables';
+
+.payment-title-conatiner {
+    padding: 12rem 0 0 0;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .payment-edit-heading {
+        color: white;
+        background-color: black;
+        text-transform: uppercase;
+        text-align: right;
+        letter-spacing: 1px;
+        margin: 0;
+
+        @include breakpoint(0px) {
+            font-size: 18px;
+            padding: 15px 20px;
+            max-width: 200px;
+        }
+
+        @include breakpoint(769px) {
+            font-size: 24px;
+            max-width: 300px;
+            padding: 25px 30px;
+        }
+    }
+}
+
+.user-payment-form-container {
+    width: 100%;
+    padding: 25px 0 100px 0;
+
+    .user-payment-form-wrapper {
+        margin: auto;
+
+        @include breakpoint(1300px) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-down("xl") {
+            width: 55%;
+        }
+
+        @include media-breakpoint-down("md") {
+            width: 100%;
+        }
+
+
+        .user-address-form {
+            width: 100%;
+
+            @include breakpoint(0px) {
+                padding: 10px 12px;
+            }
+
+            @include breakpoint(769px) {
+                padding: 20px;
+            }
+
+            .card-name-container,
+            .card-number-container {
+                margin-bottom: 24px;
+
+                .lable-text {
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                    font-weight: 500;
+                    color: #000;
+                }
+
+                .payment-input {
+                    border: 1px solid #767676;
+                    font-size: 14px;
+                    letter-spacing: 0.8px;
+                    height: calc(1.5em + 0.875rem + 2px);
+                    border-radius: 0;
+                }
+            }
+
+            .card-expiry-date-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 24px;
+
+                @include breakpoint(0px) {
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
+                @include breakpoint(769px) {
+                    flex-direction: row;
+                    gap: 0;
+                }
+
+                .card-expiry-month-select,
+                .card-expiry-year-select {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint(0px) {
+                        width: 100%;
+                        gap: 16px;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 48%;
+                        gap: 0;
+                    }
+
+                    .custom-select-container {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 0;
+
+
+                        .custom-select-label {
+                            font-size: 14px;
+                            letter-spacing: 0.5px;
+                            font-weight: 500;
+                            color: #000;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .custom-select-input-box {
+                            border: 1px solid #767676;
+                            height: calc(1.5em + 0.875rem + 2px);
+                            border-radius: 0;
+                            justify-content: space-between;
+
+                            .selected-option-text {
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                            }
+
+                            .custom-dropdown-icon {
+                                font-size: 14px;
+                            }
+
+                            .custom-options-list {
+                                top: 100%;
+                                height: 200px;
+                                overflow-y: scroll;
+
+                                &::-webkit-scrollbar {
+                                    width: 5px;
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: #888;
+                                }
+
+                                &::-webkit-scrollbar-track {
+                                    background-color: #f1f1f1;
+                                }
+
+                                .custom-options {
+                                    padding: 8px;
+                                    font-size: 13px;
+                                    letter-spacing: 1px;
+                                }
+                            }
+                        }
+                    }
+
+
+
+                }
+
+            }
+
+            .payment-checkbox-conatiner {
+                margin-bottom: 24px;
+
+                .form-check {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding-left: 0;
+
+
+                    .custom_label {
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                        font-weight: 500;
+                        color: #000;
+                        align-items: center;
+
+                        .custom_input {
+                            margin-right: 12px;
+                            width: 18px;
+                            height: 18px;
+
+                            &::before {
+                                width: 10px;
+                                height: 10px;
+                            }
+
+                            &:checked::before {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 30px auto;
+
+                .secondary-btn {
+                    width: 48%;
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+                }
+
+                .primary-btn {
+                    width: 48%;
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+                }
+            }
+
+            .myAccount-link-container {
+                display: flex;
+                align-items: center;
+
+                .common-customer-detail {
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

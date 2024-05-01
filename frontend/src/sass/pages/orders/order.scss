@@ -1,0 +1,45 @@
+@import "../../variables";
+
+.orders-page {
+  margin-top: 82px;
+
+  .order-history-title-conatiner {
+    padding: 5rem 0 0 0;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .order-history-heading {
+      color: white;
+      background-color: black;
+      text-transform: uppercase;
+      text-align: right;
+      letter-spacing: 1px;
+      margin: 0;
+
+      @include breakpoint(0px) {
+        font-size: 18px;
+        padding: 15px 20px;
+        max-width: 200px;
+      }
+
+      @include breakpoint(769px) {
+        font-size: 24px;
+        max-width: 300px;
+        padding: 25px 30px;
+      }
+    }
+  }
+
+  .myAccount-link-container {
+    display: flex;
+    align-items: center;
+
+    .common-customer-detail {
+      padding-top: 50px;
+      align-items: center;
+    }
+  }
+}

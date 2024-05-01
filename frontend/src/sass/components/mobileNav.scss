@@ -1,0 +1,93 @@
+@import "../variables";
+
+.offcanvas {
+  z-index: 99999;
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  .offcanvas-header {
+    justify-content: flex-start;
+
+    button {
+      font-size: 22px;
+    }
+  }
+
+  .offcanvas-body {
+    min-height: 450px;
+
+    .navbar-nav {
+      gap: 24px;
+
+      .dropdown {
+        a {
+          &::after {
+            content: none;
+          }
+
+          .arrow-down-icon {
+            margin-left: 3px;
+            margin-bottom: 4px;
+            font-size: 11px;
+          }
+        }
+
+        .dropdown-menu {
+          border: none;
+          margin-bottom: 10px;
+
+          &.custom-dropdown-menu {
+            gap: 5px;
+          }
+
+          li {
+            padding: 5px 0;
+
+            a {
+              font-weight: 600;
+              font-size: 12px;
+              letter-spacing: 0.8px;
+
+              &::before {
+                content: none;
+              }
+
+              &:focus,
+              &:active {
+                background: none;
+                box-shadow: none;
+                border: none;
+              }
+            }
+
+            .inside {
+              width: 80%;
+              margin-left: 13%;
+
+              li {
+                a {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .line-break {
+        border-bottom: 1.5px solid rgb(0, 0, 0, 0.2);
+
+        a {
+          color: #000;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

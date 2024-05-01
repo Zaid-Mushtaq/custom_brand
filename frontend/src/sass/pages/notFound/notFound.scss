@@ -1,0 +1,26 @@
+.PageNotFound {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .notFound-icon {
+    width: 10vmax;
+    height: 10vmax;
+    color: #f58621;
+  }
+
+  .notFound-text {
+    font: 500 2vmax "Roboto";
+  }
+  .notFound-button {
+    padding: 1vmax 4vmax;
+    color: white;
+    text-decoration: none;
+    background: #434343;
+    display: inline-block;
+    margin-top: 1vmax;
+  }
+}

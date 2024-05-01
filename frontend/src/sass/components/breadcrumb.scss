@@ -1,0 +1,32 @@
+@import "../variables";
+
+.product-breadcrumb {
+    border-bottom: none;
+
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px 24px;
+        margin: auto;
+        background-color: transparent;
+        border-radius: 2px;
+
+        .breadcrumb-item {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            text-transform: uppercase;
+            line-height: 1.5;
+
+            .breadcrumb-link {
+                text-decoration: none !important;
+                color: #333 !important;
+
+                &:link {
+                    text-decoration: none !important;
+                    color: #333 !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.register-term-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .register-text-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    .register-text {
+      font-size: 14.5px;
+      letter-spacing: 0.5px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 0;
+    }
+
+    .register-link {
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .terms-conditions-container {
+    width: 100%;
+    display: flex;
+
+    .terms-conditions-text {
+      text-align: center;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
+      color: #000;
+      line-height: 18px;
+
+      .link {
+        text-decoration: underline;
+        color: #000;
+      }
+    }
+  }
+}

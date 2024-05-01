@@ -1,0 +1,128 @@
+@import "../variables";
+
+.dashboard-main-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 93px;
+  border: none;
+  .main-dashboard-content {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    // grid-template-columns: 1fr 5fr;
+    // border: 2px solid blue;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @include media-breakpoint-down("lg") {
+      grid-template-columns: none;
+    }
+    @include media-breakpoint-down("md") {
+      grid-template-columns: 1fr;
+      background-color: rgb(235, 235, 235);
+    }
+    .dashboardContainer {
+      border-left: 1px solid rgba(0, 0, 0, 0.13);
+      background-color: rgb(255, 255, 255);
+      padding: 2rem 0;
+      width: calc(100% - 250px);
+      position: relative;
+      left: 250px;
+      @include media-breakpoint-down("md") {
+        border-left: none;
+        width: calc(100% - 5%);
+        left: 2.5%;
+        top: 3vmax;
+      }
+
+      h1 {
+        color: #0876a2;
+        font: 500 2.5rem "Roboto";
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+        text-align: center;
+        @include media-breakpoint-down("md") {
+          width: 100%;
+        }
+      }
+      .dashboardSummary {
+        div {
+          display: flex;
+          justify-content: center;
+          background-color: white;
+          .dashboard-total {
+            background-color: #073857;
+            color: white;
+            font: 300 1.3rem "Roboto";
+            text-align: center;
+            padding: 1.5rem;
+            width: 100%;
+            margin: 0 2rem;
+
+            @include media-breakpoint-down("md") {
+              margin: 0;
+            }
+          }
+        }
+        .dashboardSummaryBox2 {
+          a {
+            color: rgb(0, 0, 0);
+            font: 300 1.3vmax "Roboto";
+            text-align: center;
+            background-color: #1f3f49;
+            text-decoration: none;
+            padding: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            flex-direction: column;
+            // border: 2px solid red;
+            border-radius: 100%;
+            margin: 1rem 2rem;
+            height: 8vmax;
+            width: 8vmax;
+            font-weight: 400;
+            &:first-child {
+              background-color: #1c4e80;
+              color: rgb(255, 255, 255);
+            }
+
+            p {
+              margin: 0;
+            }
+
+            &:last-child {
+              background-color: #20283e;
+              color: white;
+            }
+
+            @include media-breakpoint-down("md") {
+              padding: 0.5rem;
+              margin: 0.8rem;
+              font: 400 0.9rem "Roboto";
+              width: 12vmax;
+              height: 12vmax;
+            }
+          }
+        }
+
+        .lineChart {
+          width: 80%;
+          margin: auto;
+          @include media-breakpoint-down("md") {
+            width: 90%;
+          }
+        }
+
+        .doughnutChart {
+          width: 24vmax;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

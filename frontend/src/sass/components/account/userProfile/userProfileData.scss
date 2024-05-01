@@ -1,0 +1,131 @@
+@import "../../../variables";
+
+.profile-title-conatiner {
+    padding: 12rem 0 0 0;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .profile-edit-heading {
+        color: white;
+        background-color: black;
+        text-transform: uppercase;
+        text-align: right;
+        letter-spacing: 1px;
+        margin: 0;
+
+        @include breakpoint(0px) {
+            font-size: 18px;
+            padding: 15px 20px;
+            max-width: 200px;
+        }
+
+        @include breakpoint(769px) {
+            font-size: 24px;
+            max-width: 300px;
+            padding: 25px 30px;
+        }
+    }
+}
+
+.user-profile-form-data-container {
+    width: 100%;
+    padding: 25px 0 100px 0;
+
+    .user-form-main {
+        margin: auto;
+
+        @include breakpoint(1300px) {
+            width: 45%;
+        }
+
+        @include media-breakpoint-down("xl") {
+            width: 55%;
+        }
+
+        @include media-breakpoint-down("md") {
+            width: 100%;
+        }
+
+        .user-profile-form {
+
+            @include breakpoint(0px) {
+                padding: 0 12px 0;
+            }
+
+            @include breakpoint(769px) {
+                padding: 20px;
+            }
+
+            .firast-name-container,
+            .last-name-container,
+            .phone-number-container,
+            .birthDay-container,
+            .postal-code-container,
+            .email-address-container {
+                margin-bottom: 24px;
+
+                .lable-text {
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                    font-weight: 500;
+                    color: #000;
+                }
+
+                .user-name-input {
+                    border: 1px solid #767676;
+                    font-size: 14px;
+                    letter-spacing: 0.8px;
+                    height: 40px;
+                    border-radius: 0;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 20px auto;
+
+
+                @include breakpoint(0px) {
+                    gap: 10px;
+                }
+
+                @include breakpoint(769px) {
+                    gap: 50px;
+                }
+
+
+                .secondary-btn {
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+
+                    @include breakpoint(0px) {
+                        width: 45%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 40%;
+                    }
+                }
+
+                .primary-btn {
+                    border: 2px solid #DFDFDF;
+                    text-transform: uppercase;
+
+                    @include breakpoint(0px) {
+                        width: 45%;
+                    }
+
+                    @include breakpoint(769px) {
+                        width: 40%;
+                    }
+                }
+
+            }
+        }
+    }
+}

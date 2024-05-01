@@ -1,0 +1,170 @@
+@import "../../variables";
+
+.checkout-header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #f9f7f5;
+
+  @include media-breakpoint-down(md) {
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+
+    .cheakout-logo {
+      a {
+        text-decoration: none;
+
+        .__heading {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          margin-bottom: 0;
+
+          .span1 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1.5px;
+            color: rgb(0, 0, 0);
+          }
+
+          .span2 {
+            font-size: 20px;
+            line-height: 18px;
+            letter-spacing: 1.5px;
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+
+    .checkout-login-logo {
+      a {
+        text-decoration: none;
+
+        .__heading {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          margin-bottom: 0;
+
+          .span1 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1.5px;
+            color: rgb(0, 0, 0);
+          }
+
+          .span2 {
+            font-size: 20px;
+            line-height: 18px;
+            letter-spacing: 1.5px;
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+
+      @include breakpoint(0px) {
+        display: none;
+      }
+
+      @include breakpoint(769px) {
+        display: flex;
+      }
+    }
+
+    .cheakout-header-icons {
+      display: flex;
+      flex-direction: row;
+      gap: 28px;
+      align-items: center;
+      margin-right: 40px;
+
+      @include breakpoint(0px) {
+        display: none;
+      }
+
+      @include breakpoint(769px) {
+        display: flex;
+      }
+
+      .delivery-icon-wrapper,
+      .payment-icon-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+
+        .delivery-icon,
+        .payment-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #e0dad1;
+
+          .icon-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgb(0, 0, 0);
+            margin-bottom: 0;
+          }
+        }
+
+        .delivery-text,
+        .payment-text {
+          font-size: 15px;
+          color: rgb(0, 0, 0);
+          letter-spacing: 0.5px;
+          line-height: 16px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .label-text-container {
+      margin-right: 20px;
+
+      p {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        margin-bottom: 0;
+
+        .link {
+          color: #000;
+
+          .romantic-looks-span {
+            @include breakpoint(0px) {
+              display: none;
+            }
+
+            @include breakpoint(769px) {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

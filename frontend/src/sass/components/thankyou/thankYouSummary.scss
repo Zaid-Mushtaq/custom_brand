@@ -1,0 +1,200 @@
+@import "../../variables";
+
+.thankyou-summary-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(0px) {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  @include breakpoint(1024px) {
+    width: 80%;
+    margin-top: 80px;
+  }
+
+  .order-tile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      cursor: pointer;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #888;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    @include breakpoint(0px) {
+      justify-content: space-between;
+    }
+
+    @include breakpoint(769px) {
+    }
+
+    .order-tile {
+      @include breakpoint(0px) {
+        width: 75%;
+      }
+
+      @include breakpoint(769px) {
+        width: 50%;
+      }
+    }
+
+    .__quantity-container {
+      @include breakpoint(0px) {
+        width: 18%;
+      }
+
+      @include breakpoint(575px) {
+        width: auto;
+      }
+
+      @include breakpoint(769px) {
+        width: 50%;
+      }
+
+      .quantity-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        float: inline-end;
+
+        @include breakpoint(0px) {
+          width: 100%;
+        }
+
+        @include breakpoint(769px) {
+          width: 38%;
+          margin-right: 16px;
+          margin-top: 2px;
+        }
+
+        .order-tile-quantity-price-wrapper {
+          display: flex;
+
+          height: 135px;
+
+          @include breakpoint(0px) {
+            flex-direction: column;
+          }
+
+          @include breakpoint(769px) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+          .quantity-wrapper,
+          .price-wrapper {
+            .quantity-text,
+            .price-text {
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              color: rgb(0, 0, 0);
+              letter-spacing: 0.5px;
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .devider {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(227, 227, 227);
+    margin: 24px 0 0 0;
+  }
+
+  .order-total-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .order-total-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      @include breakpoint(0px) {
+        width: 100%;
+      }
+
+      @include breakpoint(769px) {
+        width: 50%;
+      }
+
+      @include breakpoint(1280px) {
+        width: 40%;
+      }
+
+      .__common-container {
+        width: 100%;
+
+        ._common-text {
+          width: 100%;
+          padding: 0 16px;
+          color: rgb(0, 0, 0);
+          margin-bottom: 2px;
+          letter-spacing: 0.5px;
+          line-height: 16px;
+          font-weight: 600;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      .subtotal-container {
+        .subtotal-text {
+          font-size: 13px;
+        }
+      }
+
+      .shipping-container {
+        margin-top: 20px;
+
+        .shipping-text {
+          font-size: 13px;
+        }
+      }
+      .shipping-container {
+        margin-top: 20px;
+
+        .product-text {
+          font-size: 13px;
+        }
+      }
+
+      .__devider {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        margin: 14px 0 0 0;
+      }
+
+      .total-container {
+        margin-top: 28px;
+
+        .total-text {
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

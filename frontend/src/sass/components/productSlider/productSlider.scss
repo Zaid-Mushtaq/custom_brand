@@ -1,0 +1,24 @@
+.product-slider-container {
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+
+    .slick-active .indicator {
+      background-color: #000;
+    }
+
+    .indicator {
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 10px;
+      margin: 0 5px;
+      width: 10px;
+    }
+  }
+}

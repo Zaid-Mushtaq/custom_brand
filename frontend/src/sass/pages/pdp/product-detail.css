@@ -1,0 +1,15 @@
+.product-detail-page {
+  margin-top: 82px;
+}
+.product-detail-page .custom-container .product-detail-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+@media (max-width: 768.98px) {
+  .product-detail-page .custom-container .product-detail-page {
+    padding: 0 20px;
+  }
+}/*# sourceMappingURL=product-detail.css.map */

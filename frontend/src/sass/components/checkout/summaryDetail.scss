@@ -1,0 +1,93 @@
+@import "../../variables";
+
+.summary-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(0px) {
+    background: rgb(237, 237, 237);
+  }
+
+  @include breakpoint(769px) {
+    background: #fff;
+  }
+
+  .summary-heading {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .summary-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @include breakpoint(0px, 769px) {
+      margin-top: 20px;
+    }
+
+    .sub-total-container,
+    .shipping-text-container,
+    .taxes-container,
+    .your-total-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .subtotal-text,
+      .subtotal-value,
+      .shiping-text,
+      .shiping-value,
+      .taxes-text,
+      .taxes-value {
+        margin-bottom: 0;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+        color: #000;
+      }
+    }
+
+    ._total {
+      margin-top: 14px;
+
+      .your-total-text {
+        margin-bottom: 0;
+        font-size: 14.5px;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+      }
+
+      .your-total-value {
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        letter-spacing: 0.34px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .your-bag-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    .your-bag-heading {
+      font-size: 22px;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+  }
+}

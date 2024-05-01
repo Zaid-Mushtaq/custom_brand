@@ -1,0 +1,80 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@formatjs/cli": "^6.2.4",
+    "@popperjs/core": "^2.11.8",
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.4.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.2",
+    "e-commercehamza": "file:..",
+    "node-sass": "^9.0.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.19.0",
+    "react-router-dom": "^6.19.0",
+    "react-scripts": "5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "styled-components": "^6.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "axios": "^1.6.2",
+    "chart.js": "^4.4.1",
+    "country-state-city": "^3.2.1",
+    "file-loader": "^6.2.0",
+    "libphonenumber-js": "^1.10.54",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-chartjs-2": "^3.3.0",
+    "react-data-table-component": "^7.6.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.0.1",
+    "react-intl": "^6.5.5",
+    "react-js-pagination": "^3.0.3",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^9.0.4",
+    "react-slick": "^0.29.0",
+    "react-table": "^7.8.0",
+    "redux": "^5.0.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^3.1.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "proxy": "http://127.0.0.1:8000"
+}

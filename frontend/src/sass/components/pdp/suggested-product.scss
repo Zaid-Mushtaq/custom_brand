@@ -1,0 +1,24 @@
+@import "../../variables";
+
+.suggested-products {
+    width: 100%;
+
+    .suggested-products-heading-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .suggested-product-text {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid;
+            padding: 0 0 5px;
+            line-height: 1.5;
+
+            @include media-breakpoint-down("md") {
+                font-size: 22px;
+            }
+        }
+    }
+}

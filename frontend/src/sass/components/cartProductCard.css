@@ -1,0 +1,109 @@
+.cart-product-card {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0px;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+.cart-product-card .product-image-container {
+  margin-right: 20px;
+}
+.cart-product-card .product-image-container .product-image {
+  max-width: 120px;
+  max-height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart-product-card .product-details {
+  flex-grow: 1;
+}
+.cart-product-card .product-details .product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.cart-product-card .product-details .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.cart-product-card .product-details .details .details-label {
+  margin-right: 10px;
+  font-size: 12px;
+}
+.cart-product-card .product-details .details .details-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+.cart-product-card .product-details .details .details-name {
+  font-size: 12px;
+}
+.cart-product-card .product-details .edit-link {
+  font-size: 12px;
+}
+.cart-product-card .product-details .edit-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+.cart-product-card .product-details .edit-link a:hover {
+  text-decoration: underline;
+}
+.cart-product-card .product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.cart-product-card .product-actions .cancel-icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cart-product-card .product-actions .product-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.cart-product-card .product-actions .product-labels .labels-row,
+.cart-product-card .product-actions .product-labels .values-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  gap: 15px;
+  font-size: 12px;
+}
+.cart-product-card .product-actions .product-labels .values-row {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+.cart-product-card .product-actions .product-labels .quantity-control select {
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: border-color 0.3s, color 0.3s;
+}
+.cart-product-card .product-actions .product-labels .quantity-control select:hover, .cart-product-card .product-actions .product-labels .quantity-control select:focus {
+  border-color: #000000;
+  color: #000000;
+}
+
+@media (max-width: 543.98px) {
+  .cart-product-card .product-image-container .product-image {
+    max-width: 18vw;
+    max-height: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}/*# sourceMappingURL=cartProductCard.css.map */

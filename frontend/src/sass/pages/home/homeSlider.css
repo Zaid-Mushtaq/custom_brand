@@ -1,0 +1,108 @@
+.custom-height {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 0px) {
+  .custom-height {
+    height: calc(88vh - 114px);
+  }
+}
+@media (min-width: 769px) {
+  .custom-height {
+    height: calc(50vh - 105px);
+  }
+}
+@media (min-width: 1024px) {
+  .custom-height {
+    height: calc(100vh - 146px);
+  }
+}
+@media (min-width: 1500px) {
+  .custom-height {
+    height: calc(85vh - 146px);
+  }
+}
+.custom-height .carousel-control-next,
+.custom-height .carousel-control-prev {
+  display: none;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.container-fluid .custom-carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 15px 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container-fluid .custom-carousel-button:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.container-fluid .custom-carousel-button.prev {
+  left: 0;
+}
+.container-fluid .custom-carousel-button.next {
+  right: 0;
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.slides .row {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.slides .row #carouselExampleCaptions {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.slides .row #carouselExampleCaptions img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slides .row .carousel-indicators {
+  gap: 10px;
+}
+.slides .row .carousel-indicators #custom_crousel_radius {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.slides .row .carousel-indicators .active {
+  background-color: black;
+}
+.slides .row .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.slides .row .carousel-caption h5 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.slides .row .carousel-caption p {
+  font-size: 16px;
+  font-weight: lighter;
+}/*# sourceMappingURL=homeSlider.css.map */
