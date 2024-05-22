@@ -1,6 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware,compose } from "redux";
 import { thunk } from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
+
 import {
   homeProductReducer,
   newProductReducer,
@@ -65,12 +65,19 @@ const initialState = {
   },
 };
 
+let composeEnhancers = compose;
+
+// Apply Redux DevTools extension only in development mode
+if (process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+}
+
 const middleware = [thunk];
+const enhancer = composeEnhancers(applyMiddleware(...middleware));
 
 const store = createStore(
   reducer,
   initialState,
-  composeWithDevTools(applyMiddleware(...middleware))
+  enhancer
 );
-
 export default store;

@@ -7,9 +7,9 @@ const errorMiddleWare = require("./middleware/error");
 const path = require("path");
 
 //config
-if (process.env.NODE_ENV !== "PRODUCTION") {
+// if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
-}
+// }
 
 const cookieParser = require("cookie-parser");
 app.use(express.json());

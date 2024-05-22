@@ -4,9 +4,9 @@ const cloudinary = require("cloudinary");
 const app = require("./app");
 
 //config
-if (process.env.NODE_ENV !== "PRODUCTION") {
+// if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
-}
+// }
 //Handling Uncaught Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
@@ -16,8 +16,8 @@ process.on("uncaughtException", (err) => {
 
 // Database Connect
 mongoose
-  // .connect(process.env.DATABASE_LOCAL, {
-  .connect(process.env.DB_URL, {
+  // .connect(process.env.DB_URL, {
+    .connect(process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: true,
